@@ -1,0 +1,16 @@
+Function findDuplicateClue(head):
+    Initialize slow = head
+    Initialize fast = head
+
+    Do:
+        slow = slow.next
+        fast = fast.next.next
+    While slow != fast
+
+    Reset slow = head
+
+    While slow != fast:
+        slow = slow.next
+        fast = fast.next
+
+    Return slow.value
