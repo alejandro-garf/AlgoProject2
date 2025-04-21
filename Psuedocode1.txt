@@ -1,0 +1,12 @@
+Function calculateWaitHouses(houseCandies):
+    Initialize n = Length of houseCandies
+    Initialize waitHouses array of size n with all zeros
+    Initialize an empty stack
+
+    For i from 0 to n-1:
+        While stack is not empty and houseCandies[i] > houseCandies[stack.top()]:
+            idx = stack.pop()
+            waitHouses[idx] = i - idx
+        Push i onto stack
+
+    Return waitHouses
